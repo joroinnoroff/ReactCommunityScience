@@ -60,7 +60,7 @@ tags, animation }) => {
 const Works = () => {
   return (
     <>
-      <section id="exhibitsSection" className='mt-20'>
+      <section id="exhibitsSection" className='mt-96 sm:mt-20'>
         <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>
         Explore together
@@ -77,14 +77,14 @@ const Works = () => {
           The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
         </motion.p>
         </div>
-        <div className='w-full flex'>
+        <div className='w-full flex items-center'>
         <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           Learn more and join our Youngster Program, Click <a href="#Youngsterclub" className='hover:text-white transition-all'>Here</a>
         </motion.p>
         </div>
-        <div className='mt-20 flex flex-wrap gap-7'>
+        <div className='mt-20 flex flex-wrap gap-7 items-center'>
           {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}

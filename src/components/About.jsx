@@ -17,7 +17,7 @@ import Modal from './Modal';
 import Lottie from 'lottie-react';
 import animationData from './canvas/animation_llgkb50m.json'
 
-
+import museum from '../assets/museum.jpg'
 
 import TicketForm from './TicketForm';
 import { HiPlusSm, HiOutlineMinusSm, HiOutlineTicket } from 'react-icons/hi'
@@ -49,12 +49,26 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-5 text-white text-[17px] max-w-3xl leading-[30px]'
       >
-      For teachers and schooltrips
-      Free entrance.
+      For teachers and schooltrips:
+      </motion.p>
+
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='mt-5 text-white text-[17px] max-w-3xl leading-[30px] font-semibold uppercase'
+      >
+      Free $
+      </motion.p>
+      <motion.p 
+           variants={fadeIn("", "", 0.1, 1)}
+           className='mt-5 text-white text-[17px] max-w-3xl leading-[30px]'
+           >
       As a community-driven museum, we want to work with schools to create places of learning and exploring. Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them.
       </motion.p>
 
+     
       <div className='mt-3 flex flex-col gap-5'>
+      <button className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all"><a href="#contact">Book Schooltrip</a></button>
+
       <button onClick={openModal} className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all">Get Your Tickets Here</button>
       <Modal isOpen={isModalOpen} onClose={closeModal} >
        <div className='flex flex-col flex-wrap items-center z-50 justify-center mt-0'>
@@ -79,6 +93,11 @@ const About = () => {
         </div>
        </div>
       </Modal>
+      
+
+      <div className='flex items-center mx-0 ]'>
+        <img src={museum} alt="museum" className='h-[500px] rounded-3xl md:h-[800px]' fill />
+      </div>
     </div>
 
     

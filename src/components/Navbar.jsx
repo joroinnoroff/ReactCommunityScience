@@ -35,7 +35,7 @@ const Navbar = () => {
     height={100} // if it doesn't conflict with internal dimensions
   />
 </div>
-              <p className='text-white text-[18px] first-letter:font-bold
+              <p className='text-white text-[18px] font-bold md:text-[23px]
               cursor-pointer flex'>
                 COMMUNITY SCIENCE MUSEUM
               </p>
@@ -61,13 +61,13 @@ const Navbar = () => {
         justify-end items-center'>
           <img src={toggle ? close : menu}
           alt='menu'
-          className='w-[28px] h-[28px]
+          className='w-[32px] h-[32px]
           object-contain cursor-pointer'
           onClick={() => setToggle(!toggle)}
           />
 
           <div className={`${!toggle ? 'hidden'
-           : 'flex'} p-10 bg-sky-900 absolute 
+           : 'flex'} p-10 bg-amber-900 absolute 
            top-20 right-0 mx-4 my-2 min-w-[170px]
            z-10 rounded-xl flex items-center`}>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
           <li
           key={nav.id}
           className={`${
-            active === nav.title ? "text-white" : "text-black transition-all"
+            active === nav.title ? "text-white" : "text-white transition-all"
           } hover:text-white text-[20px] font-medium cursor-pointer`}
           onClick={() => setActive(nav.title)}>
             <a href={`#${nav.id}`}>{nav.title}</a>

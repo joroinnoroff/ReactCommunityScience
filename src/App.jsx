@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { About, Contact, Feedbacks,
 Hero, Navbar, Tech, Works} from './components'
 import Exhibits from './components/Exhibits';
+import Footer from "./components/Footer";
 import Youngster from "./components/Youngster";
 
 
@@ -31,8 +32,7 @@ const App = () => {
         </div>
         <Youngster />
         <Contact />
-        <Works />
-        <Feedbacks />
+        <Footer />
      
       </div>
     </BrowserRouter>

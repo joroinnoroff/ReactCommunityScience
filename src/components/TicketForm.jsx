@@ -81,7 +81,7 @@ function TicketForm() {
   const [isAnimationPlayed, setIsAnimationPlayed] = useState(false);
 
   return (
-    <div className='mt-3 flex items-center flex-col gap-5 '>
+    <div className='mt-3 flex items-center flex-col gap-5 border px-4 py-4 rounded-xl shadow-xl'>
       
       {ticketTypes.map((ticket) => (
         <div key={ticket.id} className='flex mx-auto mt-0 gap-3 '>
@@ -103,6 +103,14 @@ function TicketForm() {
         </div>
       ))}
 
+<input
+  type='date'
+  value={selectedDate}
+  required
+  onChange={(e) => setSelectedDate(e.target.value)}
+  className={`mt-2 text-white px-10 py-4 bg-primary rounded-xl`}
+/>
+
       <div className='bg-black border shadow-lg w-full'/>
       <div className="total">
         <h3>Total amount: <span id='total'>{totalSum}$</span></h3>
@@ -116,8 +124,9 @@ function TicketForm() {
   <label htmlFor='Email'>Enter your email to get Tickets</label>
   <input
     type='email'
+    
     placeholder='Email..'
-    className={`mt-2 text-white px-6 py-1 bg-primary rounded-xl ${
+    className={` mt-2 text-white px-6 py-3 bg-primary rounded-xl ${
       isEmailValid ? '' : 'border-red-500'
     }`}
     value={enteredEmail}
@@ -131,20 +140,14 @@ function TicketForm() {
 
 <p>For Schools that wish to book guided tours, Please Email us</p>
 <button className='px-5 border rounded-md'><a href="#contact" className='flex items-center gap-2'>Here <HiOutlineMail /></a></button>
-<input
-  type='date'
-  value={selectedDate}
-  required
-  onChange={(e) => setSelectedDate(e.target.value)}
-  className={`mt-2 text-white px-6 py-1 bg-primary rounded-xl`}
-/>
+
 
 
 
       <div className='z-11 mt-10'>
         <Toaster position='bottom-center' /> {/* Add this line to render the toast container */}
       </div>
-      <button className='px-10 border text-xl rounded-md' onClick={handlePurchase} id='Add'>
+      <button className='px-10 py-3 border text-2xl rounded-md bg-amber-700 text-white' onClick={handlePurchase} id='Add'>
   Purchase
   {isAnimationPlayed && (
     <Lottie

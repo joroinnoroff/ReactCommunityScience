@@ -11,8 +11,8 @@ const Youngster = () => {
   return (
     <div>
       <div className='flex items-center justify-center'>
-      <Lottie animationData={animation} style={{ height: '250px', width: '250px' }} />
-        <Lottie animationData={animationData} style={{ height: '250px', width: '250px' }}/>
+      <Lottie animationData={animation} style={{ height: '170px', width: '250px' }} />
+        <Lottie animationData={animationData} style={{ height: '210px', width: '250px' }}/>
 
       </div>
       <div className='flex flex-col items-center'>

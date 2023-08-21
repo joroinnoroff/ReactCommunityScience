@@ -31,6 +31,8 @@ import evo from "./evo.jpg";
 import eco from "./eco.jpg";
 import rob from "./robai.jpg";
 
+import museum from "./museum.jpg";
+
 import school from "./School.svg";
 export {
   logo,
@@ -62,4 +64,5 @@ export {
   eco,
   rob,
   school,
+  museum,
 };

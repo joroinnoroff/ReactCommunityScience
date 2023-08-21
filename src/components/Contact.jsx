@@ -132,7 +132,7 @@ const Contact = () => {
           type='submit'
           className='bg-teritary p-3 px-8 outline-none
           w-fit text-white font-bold shadow-md shadow-primary
-          rounded-xl hover:bg-purple-800'
+          rounded-xl hover:bg-amber-600'
           >
             {loading ? 'sending...' : 'send'}
           </button>
