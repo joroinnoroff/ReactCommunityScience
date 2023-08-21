@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 
 import { motion } from "framer-motion";
 import { Tilt } from 'react-tilt'
@@ -10,39 +10,34 @@ import { styles } from "../style";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import Modal from './Modal';
 
-const ServiceCard = ({ index, title, icon, price }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {price}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+
+import Lottie from 'lottie-react';
+import animationData from './canvas/animation_llgkb50m.json'
+
+
+
+import TicketForm from './TicketForm';
+import { HiPlusSm, HiOutlineMinusSm, HiOutlineTicket } from 'react-icons/hi'
+
 
 const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+ 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  
+ 
+
+  
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -52,18 +47,39 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-5 text-white text-[17px] max-w-3xl leading-[30px]'
       >
       For teachers and schooltrips
       Free entrance.
       As a community-driven museum, we want to work with schools to create places of learning and exploring. Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className='mt-3 flex flex-col gap-5'>
+      <button onClick={openModal} className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all">Get Your Tickets Here</button>
+      <Modal isOpen={isModalOpen} onClose={closeModal} >
+       <div className='flex flex-col flex-wrap items-center z-50 justify-center mt-0'>
+       <div className='flex items-center justify-center mt-0'>
+        <div style={{ width: '70px', height: '60px sm:110px' }}>
+          <Lottie
+            animationData={animationData}
+            width={100}  // You can also set width and height here
+            height={100} // if it doesn't conflict with internal dimensions
+          />
+        </div>
+                <div>
+                  <p className='text-black text-[13px] font-semibold
+                  cursor-pointer flex w-[250px] md:w-[400px] text-center items-center sm:text-[22px] md:text-[25px]'>
+                    COMMUNITY SCIENCE MUSEUM
+                  </p>
+                </div>
       </div>
+        <h2 className='font-semibold text-xl flex items-center'>Purchase Your Tickets here <HiOutlineTicket/></h2>
+        <div>
+         <TicketForm />
+        </div>
+       </div>
+      </Modal>
+    </div>
 
     
     </>

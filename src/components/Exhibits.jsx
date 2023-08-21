@@ -32,7 +32,7 @@ tags, animation }) => {
       className='bg-tertiary p-8 rounded-2xl 
       sm:w-[470px] w-full'
       >
-        <div className='relative h-[230px]'>
+        <div className='relative h-[230px] mt-0 flex items-center justify-center'>
         <Lottie lottieRef={animation} animationData={animation} style={{ height: '250px', width: '250px' }}/>
 
    

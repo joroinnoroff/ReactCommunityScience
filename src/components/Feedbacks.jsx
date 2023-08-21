@@ -5,7 +5,7 @@ import { StarsCanvas } from './canvas'
 const Feedbacks = () => {
   return (
     <div>
-      <StarsCanvas />
+    
     </div>
   )
 }
