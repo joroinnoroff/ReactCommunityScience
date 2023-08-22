@@ -33,12 +33,12 @@ import evoLottie from "../assets/evoLottie.json";
 
 export const navLinks = [
   {
-    id: "visit",
-    title: "Visit",
+    id: "exhibitsSection",
+    title: "Exhibits",
   },
   {
-    id: "About",
-    title: "About",
+    id: "about",
+    title: "Tickets",
   },
   {
     id: "Contact",

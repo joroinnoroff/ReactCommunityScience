@@ -21,15 +21,8 @@ const Hero = () => {
     Saturday: "11:00 - 21:00",
     Sunday: "11:00 - 21:00",
   };
-
-  const now = new Date();
-  const currentDay = now.toLocaleString('en-us', { weekday: 'long' });
-  const currentTime = now.getHours() * 60 + now.getMinutes();
-
-  const goToExhibitsSection = () => {
-    const exhibitsSection = document.getElementById('exhibitsSection');
-    exhibitsSection.scrollIntoView({ behavior: 'smooth' });
-  };
+ 
+ 
 
   return (
     <section className='w-screen h-screen mx-auto'>
@@ -41,14 +34,10 @@ const Hero = () => {
           <h1 className={`${styles.heroSubText} text-white`}>
             Book Your Tickets
           </h1>
-          <button className={`${styles.heroHeadText} border p-2 rounded-xl hover:bg-orange-500`} id="exhibitsButton" onClick={goToExhibitsSection}>
-            Here
+          <button className={`${styles.heroHeadText} border p-2 rounded-xl hover:bg-orange-500`} id="exhibitsButton">
+            <a href="#about">Here</a>
           </button>
-          <div>
-            {/* Display real-time opening hours */}
-            We are:
-            {openingHours[currentDay]} {/* Display the opening hours for the current day */}
-          </div>
+        
 
           <div>
      

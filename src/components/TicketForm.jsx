@@ -5,6 +5,7 @@ import { HiPlusSm, HiOutlineMinusSm, HiOutlineMail } from 'react-icons/hi';
 import { Toaster, toast } from 'react-hot-toast';
 import Lottie from 'lottie-react';
 import checkedLottie from '../assets/checkedLottie.json';
+import OpenHoursList from './OpenHoursList';
 
 const ticketTypes = [
   { id: 'student', label: 'Student', price: 50 },
@@ -80,9 +81,13 @@ function TicketForm() {
 
   const [isAnimationPlayed, setIsAnimationPlayed] = useState(false);
 
+    
+ 
+ 
+
   return (
     <div className='mt-3 flex items-center flex-col gap-5 border px-4 py-4 rounded-xl shadow-xl'>
-      
+     <OpenHoursList />
       {ticketTypes.map((ticket) => (
         <div key={ticket.id} className='flex mx-auto mt-0 gap-3 '>
           <label className='border px-6 rounded-md w-[250px] font-semibold flex justify-around text-xl'>
@@ -147,7 +152,7 @@ function TicketForm() {
       <div className='z-11 mt-10'>
         <Toaster position='bottom-center' /> {/* Add this line to render the toast container */}
       </div>
-      <button className='px-10 py-3 border text-2xl rounded-md bg-amber-700 text-white' onClick={handlePurchase} id='Add'>
+      <button className='px-10 py-3 border text-2xl rounded-md bg-amber-700 hover:bg-amber-500 shadow-sm text-white' onClick={handlePurchase} id='Add'>
   Purchase
   {isAnimationPlayed && (
     <Lottie

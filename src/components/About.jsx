@@ -67,9 +67,9 @@ const About = () => {
 
      
       <div className='mt-3 flex flex-col gap-5'>
-      <button className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all"><a href="#contact">Book Schooltrip</a></button>
+      <button className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all rounded-md"><a href="#contact">Book Schooltrip</a></button>
 
-      <button onClick={openModal} className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all">Get Your Tickets Here</button>
+      <button onClick={openModal} className="font-bold border py-2 w-44 text-lg sm:text-sm hover:bg-white hover:text-black transition-all rounded-md">Get Your Tickets Here</button>
       <Modal isOpen={isModalOpen} onClose={closeModal} >
        <div className='flex flex-col flex-wrap items-center z-50 justify-center mt-0'>
        <div className='flex items-center justify-center mt-0'>
@@ -96,7 +96,7 @@ const About = () => {
       
 
       <div className='flex items-center mx-0 ]'>
-        <img src={museum} alt="museum" className='h-[500px] rounded-3xl md:h-[800px]' fill />
+        <img src={museum} alt="museum" className='h-[500px] rounded-3xl md:h-[800px]' />
       </div>
     </div>
 
