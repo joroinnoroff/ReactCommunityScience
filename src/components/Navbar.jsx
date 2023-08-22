@@ -16,13 +16,13 @@ const Navbar = () => {
   return (
    <nav className={`
    ${styles.paddingX} w-full flex items-center py-5 fixed
-   top-0 z20 bg-primary z-10` }>
+   top-0 bg-primary z-10` }>
     <div className='w-full flex justify-between items-center max-w-7xl
     mx-auto
    overflow-auto'>
       <Link 
       to="/"
-      className='flex items-center gap-2'
+      className='flex items-center'
       onClick={() => {
         setActive("");
         window.scrollTo(0,0);
@@ -31,9 +31,7 @@ const Navbar = () => {
 <div style={{ width: '90px', height: '60px' }}>
   <Lottie
     animationData={animationData}
-    width={100}  // You can also set width and height here
-    height={100} // if it doesn't conflict with internal dimensions
-  />
+/>
 </div>
               <p className='text-white text-[18px] font-bold md:text-[23px]
               cursor-pointer flex'>
