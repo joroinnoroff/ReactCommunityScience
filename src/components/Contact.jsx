@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import emailsjs from '@emailjs/browser';
 
 import { styles } from "../style";
-import { EarthCanvas, StarsCanvas } from './canvas';
+ 
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 

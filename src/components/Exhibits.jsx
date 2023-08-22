@@ -1,21 +1,17 @@
 "use client"
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+
 import { motion } from 'framer-motion'
 import Lottie from 'lottie-react';
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from '../style'
-import { experiences, projects } from '../constants'
+import { projects } from '../constants'
 import { SectionWrapper } from '../hoc/'
 import { textVariant } from '../utils/motion'
 import { fadeIn } from '../utils/motion';
 import { Tilt } from 'react-tilt';
-import { StarsCanvas } from './canvas';
-
+ 
 
 
 const ProjectCard = ({index, name, description, 

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 import { BrowserRouter } from 'react-router-dom'
 
-import { About, Contact, Feedbacks,
-Hero, Navbar, Tech, Works} from './components'
+import { About, Contact,
+Hero, Navbar} from './components'
 import Exhibits from './components/Exhibits';
 import Footer from "./components/Footer";
 import Youngster from "./components/Youngster";
