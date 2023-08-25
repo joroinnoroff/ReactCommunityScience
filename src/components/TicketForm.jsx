@@ -108,6 +108,8 @@ function TicketForm() {
         </div>
       ))}
 
+      <h3>When do you want to arrive:</h3>
+
 <input
   type='date'
   value={selectedDate}
