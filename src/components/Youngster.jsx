@@ -21,14 +21,14 @@ const Youngster = () => {
         </h2> 
 
          <div className=''>
-          <h5 className="text-center space-y-5 w-full">
+          <h5 className="text-center space-y-5 w-full indent-2">
           Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do. You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our resident Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you come ready to learn and explore.
           </h5>
          </div>
         
       </div>
 
-      <div className='flex flex-col items-center mt-5'>
+      <div className='flex flex-col items-center mt-5 indent-2'>
         <h2 className="text-center text-5xl font-semibold flex flex-col items-center">
         YOUNG STARS CLUB<HiOutlineStar />
         </h2> 

@@ -92,7 +92,7 @@ function TicketForm() {
         <div key={ticket.id} className='flex mx-auto mt-0 gap-3 '>
           <label className='border px-6 rounded-md w-[250px] font-semibold flex justify-around text-xl'>
             {ticket.label} 
-            <div className='border-l  flex px-1'>
+            <div className='border-l ordinal flex px-1'>
             {ticket.price}$
             </div>
           </label>
@@ -120,7 +120,7 @@ function TicketForm() {
 
       <div className='bg-black border shadow-lg w-full'/>
       <div className="total">
-        <h3>Total amount: <span id='total'>{totalSum}$</span></h3>
+        <h3>Total amount: <span id='total' className='ordinal'>{totalSum}</span></h3>
       </div>
       <div className='bg-black border shadow-lg w-full'/>
 
